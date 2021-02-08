@@ -1,0 +1,15 @@
+#/bin/bash
+
+load=$(cat /proc/loadavg | cut -d' ' -f1)
+loadInt=$($load | cut -d. -f1)
+
+if [[ $loadInt -lt 4 ]]; then
+    echo $load
+    echo $load
+    echo "#00FF00"
+else
+    echo $load
+    echo $load
+    echo "#FF0000"
+fi
+
